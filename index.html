@@ -89,14 +89,14 @@
        PIXEL SKATER  (one div; box-shadow paints the whole 32x32 sprite)
        ------------------------------------------------------------------- */
     .skater {
-      position: fixed;
-      bottom: 80px;
+      position: absolute;
+      bottom: 46px; /* stands on top of the sidewalk strip */
       left: 0;
-      z-index: 1; /* skates through the scene, behind hero text/buttons */
+      z-index: 2;
       width: 96px;
       height: 96px;
       cursor: pointer;
-      /* travels across the sidewalk, left to right, looping */
+      /* rolls along the sidewalk, left to right, looping */
       animation: skate-across 16s linear infinite;
     }
 
@@ -2712,21 +2712,60 @@
     }
 
     /* -------------------------------------------------------------------
-       GROUND STRIP  (cracked pixel sidewalk)
+       SCENE  (ground band at the bottom of the hero; scrolls with the page)
        ------------------------------------------------------------------- */
+    .scene {
+      position: relative;
+      z-index: 1;
+      flex: 0 0 auto;
+      width: 100%;
+      height: 130px;
+    }
+
+    /* cracked pixel sidewalk, built in CSS so it scales proportionally */
     .ground {
-      position: fixed;
+      position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 60px;
-      z-index: 99;
+      height: 46px;
+      background-color: var(--concrete);
+      background-image:
+        /* fine speckle */
+        radial-gradient(rgba(0, 0, 0, 0.16) 1px, transparent 1px),
+        /* slab seams */
+        repeating-linear-gradient(90deg,
+          transparent 0 76px,
+          #5A5A5A 76px 79px),
+        /* curb light top + shaded bottom */
+        linear-gradient(180deg,
+          #A2A2A2 0 4px,
+          #8A8A8A 4px 36px,
+          #6E6E6E 36px 46px);
+      background-size: 14px 14px, auto, auto;
+      image-rendering: pixelated;
     }
 
-    .ground svg {
-      display: block;
-      width: 100%;
-      height: 100%;
+    /* a couple of pixel cracks for character */
+    .ground::before,
+    .ground::after {
+      content: "";
+      position: absolute;
+      background: #3A3A3A;
+    }
+    .ground::before {
+      left: 22%;
+      top: 6px;
+      width: 3px;
+      height: 22px;
+      box-shadow: 3px 10px 0 #3A3A3A, 6px 10px 0 #3A3A3A;
+    }
+    .ground::after {
+      left: 68%;
+      top: 12px;
+      width: 3px;
+      height: 18px;
+      box-shadow: -3px 8px 0 #3A3A3A, -6px 8px 0 #3A3A3A;
     }
 
     /* -------------------------------------------------------------------
@@ -2801,10 +2840,9 @@
       position: relative;
       min-height: 100vh;
       overflow: hidden;
-      padding: 112px 5vw 150px;
+      padding: 100px 0 0;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       /* faint pixel-dot grid */
       background-image: radial-gradient(var(--concrete) 1px, transparent 1px);
       background-size: 24px 24px;
@@ -2821,10 +2859,17 @@
       z-index: 0;
     }
 
+    /* text column: grows to fill the space above the scene and centers content */
     .hero__inner {
       position: relative;
       z-index: 2;
-      max-width: 960px;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      max-width: 1040px;
+      padding: 32px 5vw;
     }
 
     /* status badge + role line row */
@@ -2887,7 +2932,7 @@
 
     .hero h1 {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(72px, 15vw, 220px);
+      font-size: clamp(64px, 12.5vw, 184px);
       line-height: 0.85;
       color: var(--cream);
       margin: 0;
@@ -3013,12 +3058,12 @@
     @media (max-width: 768px) {
       /* scale via the bob's keyframes so it doesn't fight the travel transform */
       @keyframes idle-bounce {
-        0%, 100% { transform: scale(0.6) translateY(0); }
-        50%      { transform: scale(0.6) translateY(3px); }
+        0%, 100% { transform: scale(0.62) translateY(0); }
+        50%      { transform: scale(0.62) translateY(3px); }
       }
-      .ground {
-        height: 40px;
-      }
+      .scene { height: 92px; }
+      .ground { height: 34px; }
+      .skater { bottom: 34px; }
 
       .nav {
         padding: 14px 6vw;
@@ -3029,8 +3074,9 @@
       .nav__links a { font-size: 8px; letter-spacing: 0; }
 
       .hero {
-        padding: 120px 7vw 160px;
+        padding: 90px 0 0;
       }
+      .hero__inner { padding: 24px 6vw; }
       .hero__sub { font-size: 16px; }
       .hero__eyebrow { font-size: 10px; }
       /* hide blocks that collide with the headline/role text on narrow screens */
@@ -3082,38 +3128,18 @@
         <a href="https://github.com/jadyn99-designz" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
-  </header>
 
-  <!-- Pixel skater character (click for a kickflip!) -->
-  <div class="skater skater-cruise" title="psst — click me" aria-hidden="true">
-    <div class="skater-bob">
-      <div class="sprite"></div>
+    <!-- Ground band: skater rolls along the sidewalk; scrolls with the hero -->
+    <div class="scene">
+      <!-- Pixel skater character (click for a kickflip!) -->
+      <div class="skater skater-cruise" title="psst — click me" aria-hidden="true">
+        <div class="skater-bob">
+          <div class="sprite"></div>
+        </div>
+      </div>
+      <div class="ground" aria-hidden="true"></div>
     </div>
-  </div>
-
-  <!-- Cracked sidewalk ground strip -->
-  <div class="ground" aria-hidden="true">
-    <svg viewBox="0 0 240 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-      <rect x="0" y="0" width="240" height="60" fill="#8A8A8A"/>
-      <rect x="0" y="0" width="240" height="6" fill="#9E9E9E"/>
-      <rect x="0" y="54" width="240" height="6" fill="#6E6E6E"/>
-      <!-- slab seams -->
-      <rect x="58" y="0" width="3" height="60" fill="#5A5A5A"/>
-      <rect x="118" y="0" width="3" height="60" fill="#5A5A5A"/>
-      <rect x="178" y="0" width="3" height="60" fill="#5A5A5A"/>
-      <!-- cracks (pixel-stepped dark lines) -->
-      <path d="M20 0 l0 14 l6 0 l0 10 l-8 0 l0 12" stroke="#3A3A3A" stroke-width="2" fill="none"/>
-      <path d="M90 60 l0 -16 l-6 0 l0 -8 l8 0" stroke="#3A3A3A" stroke-width="2" fill="none"/>
-      <path d="M150 0 l0 20 l8 0 l0 8" stroke="#3A3A3A" stroke-width="2" fill="none"/>
-      <path d="M210 60 l0 -18 l-6 0 l0 -10 l6 0" stroke="#3A3A3A" stroke-width="2" fill="none"/>
-      <!-- speckle -->
-      <rect x="40" y="30" width="2" height="2" fill="#6E6E6E"/>
-      <rect x="72" y="42" width="2" height="2" fill="#6E6E6E"/>
-      <rect x="132" y="20" width="2" height="2" fill="#6E6E6E"/>
-      <rect x="196" y="36" width="2" height="2" fill="#6E6E6E"/>
-      <rect x="100" y="14" width="2" height="2" fill="#6E6E6E"/>
-    </svg>
-  </div>
+  </header>
 
   <script>
     // Easter egg: click the skater to land a kickflip, then back to cruising.
