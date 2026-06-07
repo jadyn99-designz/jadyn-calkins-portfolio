@@ -6,6 +6,7 @@
       --blue: #1A6BFF;
       --green: #2ECC40;
       --cyan: #2DE2E6;
+      --purple: #9B6BFF;
       --concrete: #8A8A8A;
       --dark-bg: #0A0A10;
 
@@ -3587,6 +3588,206 @@
     }
 
     /* -------------------------------------------------------------------
+       CASE STUDY
+       ------------------------------------------------------------------- */
+    .cs { max-width: 1100px; margin: 0 auto; padding: 0 5vw; }
+
+    /* small label/separator spans must keep their parent (pixel) font */
+    .cs-breadcrumb .sep,
+    .cs-fromto .arrow { font: inherit; }
+
+    /* reusable image frame: drop the real .png on top of the placeholder svg */
+    .cs-img {
+      width: 100%;
+      background-color: #14141C;
+      background-size: cover, cover;
+      background-position: center, center;
+      background-repeat: no-repeat, no-repeat;
+      border: 2px solid rgba(242, 237, 228, 0.14);
+    }
+
+    /* --- hero --- */
+    .cs-hero { padding: clamp(118px, 14vw, 158px) 0 clamp(36px, 5vw, 56px); }
+
+    .cs-breadcrumb {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--concrete);
+      display: flex; align-items: center; gap: 12px;
+      margin: 0 0 30px;
+    }
+    .cs-breadcrumb .sep { color: var(--cyan); }
+
+    .cs-hero__head { display: flex; align-items: flex-start; gap: clamp(16px, 3vw, 40px); }
+    .cs-num-big {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(46px, 8vw, 104px); line-height: 0.78;
+      color: var(--concrete); flex: 0 0 auto;
+    }
+    .cs-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(54px, 11vw, 148px); line-height: 0.82;
+      color: var(--cream); margin: 0;
+    }
+    .cs-subtitle {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(26px, 4.5vw, 54px); line-height: 0.95;
+      color: var(--red); margin: 6px 0 0;
+    }
+    .cs-tags {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--cyan); line-height: 1.9; margin: 30px 0 0;
+    }
+    .cs-desc {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(18px, 2.3vw, 22px); line-height: 1.6;
+      color: var(--cream); max-width: 700px; margin: 22px 0 0;
+    }
+    .cs-stats {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--yellow); line-height: 1.9; margin: 22px 0 0;
+    }
+    .cs-meta {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 9px; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--concrete); line-height: 2;
+      border-top: 2px solid rgba(242, 237, 228, 0.12);
+      border-bottom: 2px solid rgba(242, 237, 228, 0.12);
+      padding: 18px 0; margin: 34px 0 0;
+    }
+
+    /* --- numbered blocks --- */
+    .cs-block {
+      padding: clamp(52px, 8vw, 92px) 0;
+      border-top: 2px solid rgba(242, 237, 228, 0.12);
+    }
+    .cs-block__num {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--cyan); margin: 0 0 18px;
+    }
+    .cs-block__headline {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(34px, 5.5vw, 66px); line-height: 0.95;
+      color: var(--cream); margin: 0 0 22px; max-width: 920px;
+    }
+    .cs-block__body {
+      font-family: 'Space Mono', monospace;
+      font-size: 16px; line-height: 1.7; color: var(--concrete);
+      max-width: 700px; margin: 0;
+    }
+    .cs-caption {
+      font-family: 'Space Mono', monospace;
+      font-size: 14px; line-height: 1.6; color: var(--concrete);
+      margin: 16px 0 0; text-align: center;
+    }
+
+    .cs-quote {
+      border-left: 4px solid var(--red);
+      padding-left: 24px; margin: 34px 0 0;
+      font-family: 'Space Mono', monospace; font-style: italic;
+      font-size: clamp(20px, 2.8vw, 30px); line-height: 1.5;
+      color: var(--cream); max-width: 760px;
+    }
+    .cs-quote--red { color: var(--red); }
+
+    /* centered single phone */
+    .cs-center { max-width: 330px; margin: 0 auto; }
+
+    /* split: content + image */
+    .cs-split {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(28px, 5vw, 56px); align-items: center;
+    }
+
+    /* personas */
+    .persona-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 38px;
+    }
+    .persona {
+      background: #14141C; border: 2px solid rgba(242, 237, 228, 0.14);
+      box-shadow: var(--pixel-shadow); padding: 24px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .persona__head { display: flex; align-items: center; gap: 16px; }
+    .persona__photo {
+      width: 62px; height: 62px; border-radius: 50%; flex: 0 0 auto;
+      border: 3px solid var(--cream);
+      background: #2E2E38 url('assets/ph-portrait.svg') center/cover no-repeat;
+    }
+    .persona__name { font-family: 'Bebas Neue', sans-serif; font-size: 28px; line-height: 1; color: var(--cream); margin: 0; }
+    .persona__role { font-family: 'Press Start 2P', monospace; font-size: 8px; letter-spacing: 1px; text-transform: uppercase; color: var(--cyan); margin: 7px 0 0; }
+    .persona ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+    .persona li {
+      font-family: 'Space Mono', monospace; font-size: 15px; line-height: 1.6;
+      color: var(--concrete); position: relative; padding-left: 18px;
+    }
+    .persona li::before { content: "+"; position: absolute; left: 0; color: var(--cyan); }
+
+    /* user-flow stage breadcrumb */
+    .cs-stages {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--red); line-height: 2; margin: 26px 0 0;
+    }
+
+    /* 3-column design decisions */
+    .cs-cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 3vw, 36px); margin-top: 8px; }
+    .cs-col__label { font-family: 'Press Start 2P', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--cyan); margin: 0 0 10px; }
+    .cs-col__title { font-family: 'Bebas Neue', sans-serif; font-size: 26px; line-height: 1; color: var(--cream); margin: 0 0 10px; }
+    .cs-col__body { font-family: 'Space Mono', monospace; font-size: 15px; line-height: 1.7; color: var(--concrete); margin: 0 0 18px; }
+
+    /* stems (design evolution) */
+    .stem { display: flex; gap: 18px; align-items: baseline; padding: 16px 0; border-top: 2px solid rgba(242, 237, 228, 0.10); }
+    .stem:first-of-type { border-top: none; }
+    .stem__label { font-family: 'Press Start 2P', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; min-width: 150px; flex: 0 0 auto; line-height: 1.6; }
+    .stem__desc { font-family: 'Space Mono', monospace; font-size: 15px; line-height: 1.6; color: var(--concrete); margin: 0; }
+
+    /* testing callouts */
+    .cs-callout { display: flex; gap: 14px; align-items: flex-start; padding: 18px 0; border-top: 2px solid rgba(242, 237, 228, 0.10); }
+    .cs-callout:first-of-type { border-top: none; }
+    .cs-callout__ic { font-family: 'Press Start 2P', monospace; font-size: 13px; flex: 0 0 auto; line-height: 1.4; }
+    .cs-callout--yes .cs-callout__ic { color: var(--green); }
+    .cs-callout--no .cs-callout__ic { color: var(--red); }
+    .cs-callout p { font-family: 'Space Mono', monospace; font-size: 15px; line-height: 1.6; color: var(--concrete); margin: 0; }
+    .cs-callout strong { color: var(--cream); }
+
+    .cs-fromto {
+      display: flex; align-items: center; gap: 12px; margin: 0 0 14px;
+      font-family: 'Press Start 2P', monospace; font-size: 9px;
+      letter-spacing: 1px; text-transform: uppercase; color: var(--concrete);
+    }
+    .cs-fromto .arrow { color: var(--cyan); }
+
+    /* outcome */
+    .cs-outcome { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 56px); }
+    .cs-outcome__lead { font-family: 'Space Mono', monospace; font-style: italic; font-size: clamp(22px, 3vw, 32px); line-height: 1.45; color: var(--cream); margin: 0; }
+    .cs-outcome__body { font-family: 'Space Mono', monospace; font-size: 16px; line-height: 1.7; color: var(--red); margin: 0; }
+
+    /* reflection */
+    .cs-cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 56px); }
+    .cs-col2__label { font-family: 'Press Start 2P', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--cyan); margin: 0 0 12px; }
+    .cs-col2__body { font-family: 'Space Mono', monospace; font-size: 16px; line-height: 1.7; color: var(--concrete); margin: 0; }
+
+    /* next / previous */
+    .cs-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; border-top: 2px solid rgba(242, 237, 228, 0.12); padding-top: clamp(40px, 6vw, 64px); }
+    .cs-navcard {
+      display: flex; flex-direction: column; gap: 12px;
+      background: #14141C; border: 2px solid rgba(242, 237, 228, 0.14);
+      box-shadow: var(--pixel-shadow); padding: 28px; text-decoration: none;
+      transition: transform 0.12s steps(2), box-shadow 0.12s steps(2), border-color 0.12s steps(2);
+    }
+    .cs-navcard:hover { transform: translate(-4px, -4px); box-shadow: 10px 10px 0px var(--black); border-color: var(--cyan); }
+    .cs-navcard--next { text-align: right; align-items: flex-end; }
+    .cs-navcard__tag { font-family: 'Press Start 2P', monospace; font-size: 8px; letter-spacing: 1px; text-transform: uppercase; }
+    .cs-navcard__title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(26px, 3.4vw, 36px); line-height: 1; color: var(--cream); margin: 0; }
+    .cs-navcard__meta { font-family: 'Press Start 2P', monospace; font-size: 8px; letter-spacing: 1px; text-transform: uppercase; color: var(--concrete); line-height: 1.9; }
+    .cs-navcard__link { font-family: 'Press Start 2P', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--yellow); margin-top: 6px; }
+    .cs-navcard:hover .cs-navcard__link { color: var(--cream); }
+
+    /* -------------------------------------------------------------------
        MOBILE
        ------------------------------------------------------------------- */
     @media (max-width: 768px) {
@@ -3675,6 +3876,18 @@
         margin-top: 56px;
       }
       .contact-loc__meta { text-align: left; }
+
+      /* case study stacks */
+      .cs-hero__head { flex-direction: column; gap: 8px; }
+      .cs-split,
+      .cs-cols3,
+      .cs-cols2,
+      .cs-outcome,
+      .persona-grid,
+      .cs-nav { grid-template-columns: 1fr; }
+      .cs-navcard--next { text-align: left; align-items: flex-start; }
+      .stem { flex-direction: column; gap: 4px; }
+      .stem__label { min-width: 0; }
     }
   
 

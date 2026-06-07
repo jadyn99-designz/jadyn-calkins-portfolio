@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghost-Flip &mdash; Jadyn Calkins</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a class="nav__logo" href="index.html">
+      <img class="nav__logo-img" src="assets/logo.png" alt="Jadyn Calkins logo">JADYN<span class="dot">.</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html#work" aria-current="page">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="cs">
+
+    <!-- HERO -->
+    <header class="cs-hero">
+      <p class="cs-breadcrumb"><a href="index.html#work" style="color:inherit;text-decoration:none;">Work</a> <span class="sep">&rarr;</span> SoundCloud</p>
+      <div class="cs-hero__head">
+        <span class="cs-num-big">02</span>
+        <div>
+          <h1 class="cs-title">Ghost-Flip</h1>
+          <p class="cs-subtitle">Closing the Creator Gap.</p>
+        </div>
+      </div>
+      <p class="cs-tags">Feature &middot; UX + UI &middot; Prototype '26 &middot; Mobile</p>
+      <p class="cs-desc">An AI-powered mobile feature that turns passive SoundCloud listeners into remixers, without complex software.</p>
+      <p class="cs-stats">05 Usability Tests &middot; 60 Sec Target Flip Time</p>
+      <div class="cs-meta">Role &mdash; UX/UI Designer &middot; Timeline &mdash; Capstone 2025 &middot; Platform &mdash; Mobile / iOS &middot; Tools &mdash; Figma</div>
+    </header>
+
+    <!-- Hero image -->
+    <div class="cs-img" style="aspect-ratio: 16 / 10; background-image: url('assets/ghost-flip-hero.png'), url('assets/ph-cs.svg');" role="img" aria-label="Ghost-Flip phone mockups"></div>
+
+    <!-- 00 PROTOTYPE WALKTHROUGH -->
+    <section class="cs-block">
+      <p class="cs-block__num">00 &mdash; Prototype Walkthrough</p>
+      <div class="cs-center">
+        <div class="cs-img" style="aspect-ratio: 9 / 19; background-image: url('assets/ghost-flip-prototype.png'), url('assets/ph-cs.svg');" role="img" aria-label="Prototype walkthrough"></div>
+      </div>
+      <p class="cs-caption">Prototype walkthrough &ndash; full Ghost-Flip flow from Now Playing to published flip.</p>
+    </section>
+
+    <!-- 01 THE PROBLEM -->
+    <section class="cs-block">
+      <p class="cs-block__num">01 &mdash; The Problem</p>
+      <div class="cs-split">
+        <div>
+          <h2 class="cs-block__headline">The listener wants to create. The tools say no.</h2>
+          <p class="cs-block__body">
+            SoundCloud has 300M+ tracks and millions of fans who want to remix &mdash;
+            but the jump from listener to creator is too steep. Traditional DAWs take
+            months to learn. Copyright takedowns kill momentum. Ghost-Flip builds the bridge.
+          </p>
+        </div>
+        <div class="cs-img" style="aspect-ratio: 4 / 3; background-image: url('assets/soundcloud-logo.png'), url('assets/ph-cs.svg');" role="img" aria-label="SoundCloud"></div>
+      </div>
+
+      <blockquote class="cs-quote">Making remixing as easy as applying a photo filter.</blockquote>
+
+      <div class="persona-grid">
+        <div class="persona">
+          <div class="persona__head">
+            <div class="persona__photo" style="background-image: url('assets/persona-ryan.png'), url('assets/ph-portrait.svg');"></div>
+            <div>
+              <p class="persona__name">Ryan</p>
+              <p class="persona__role">The Bedroom Producer</p>
+            </div>
+          </div>
+          <ul>
+            <li>Makes beats on Ableton</li>
+            <li>Follows producers on SoundCloud</li>
+            <li>Wants to remix but fears copyright</li>
+          </ul>
+        </div>
+        <div class="persona">
+          <div class="persona__head">
+            <div class="persona__photo" style="background-image: url('assets/persona-umi.png'), url('assets/ph-portrait.svg');"></div>
+            <div>
+              <p class="persona__name">Umi</p>
+              <p class="persona__role">The Casual Fan</p>
+            </div>
+          </div>
+          <ul>
+            <li>Listens 3+ hours a day</li>
+            <li>Shares tracks constantly</li>
+            <li>Never tried creating &ndash; feels intimidated</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 USER FLOW -->
+    <section class="cs-block">
+      <p class="cs-block__num">02 &mdash; User Flow</p>
+      <h2 class="cs-block__headline">From listener to creator in 6 stages.</h2>
+      <p class="cs-block__body">
+        Every Ghost-Flip follows a six-stage journey, from the standard SoundCloud
+        player to a published flip.
+      </p>
+      <p class="cs-stages">Now Playing &rarr; DAW Studio &rarr; Review &rarr; AI Album Art &rarr; Final Review &rarr; Flip Published</p>
+      <div class="cs-img" style="aspect-ratio: 16 / 7; margin-top: 28px; background-image: url('assets/ghost-flip-userflow.png'), url('assets/ph-cs.svg');" role="img" aria-label="User flow diagram"></div>
+    </section>
+
+    <!-- 03 DESIGN DECISIONS -->
+    <section class="cs-block">
+      <p class="cs-block__num">03 &mdash; Design Decisions</p>
+      <h2 class="cs-block__headline">Three decisions that made remixing feel human.</h2>
+      <div class="cs-cols3">
+        <div class="cs-col">
+          <p class="cs-col__label">Color Visuals</p>
+          <h3 class="cs-col__title">3-lane waveform system</h3>
+          <p class="cs-col__body">
+            Color-coded stems make isolation instant, yellow for Vocals, green for
+            Rhythm, purple for Melody. One tap isolates any stem inside the DAW Studio.
+          </p>
+          <div class="cs-img" style="aspect-ratio: 4 / 3; background-image: url('assets/ghost-flip-waveform.png'), url('assets/ph-cs.svg');" role="img" aria-label="Waveform system"></div>
+        </div>
+        <div class="cs-col">
+          <p class="cs-col__label">FX Ribbon</p>
+          <h3 class="cs-col__title">Thumb-friendly sliders</h3>
+          <p class="cs-col__body">
+            Layer your effects, then dial it in at the Mix Console. A horizontal orange
+            slider at the bottom of the DAW screen gives users a physical, tactile way
+            to blend stems in real time.
+          </p>
+          <div class="cs-img" style="aspect-ratio: 4 / 3; background-image: url('assets/ghost-flip-fxribbon.png'), url('assets/ph-cs.svg');" role="img" aria-label="FX ribbon"></div>
+        </div>
+        <div class="cs-col">
+          <p class="cs-col__label">Mix Console</p>
+          <h3 class="cs-col__title">Full control, zero overwhelm</h3>
+          <p class="cs-col__body">
+            Per-stem effect control that feels like a real mixing board &mdash;
+            condensed for your thumb, without losing the power.
+          </p>
+          <div class="cs-img" style="aspect-ratio: 4 / 3; background-image: url('assets/ghost-flip-mixconsole.png'), url('assets/ph-cs.svg');" role="img" aria-label="Mix console"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 DESIGN EVOLUTION -->
+    <section class="cs-block">
+      <p class="cs-block__num">04 &mdash; Design Evolution</p>
+      <div class="cs-split">
+        <div>
+          <h2 class="cs-block__headline">One stem at a time. Total focus.</h2>
+          <p class="cs-block__body">
+            Each stem gets its own focused view &mdash; Vocals, Rhythm, and Melody
+            isolated one at a time. No information overload, no competing waveforms.
+            Just the track you're working on and the controls you need.
+          </p>
+          <div style="margin-top: 26px;">
+            <div class="stem">
+              <span class="stem__label" style="color: var(--yellow);">Vocals</span>
+              <p class="stem__desc">Warm yellow. The human voice is warm, personal, familiar.</p>
+            </div>
+            <div class="stem">
+              <span class="stem__label" style="color: var(--blue);">Rhythm / Drums</span>
+              <p class="stem__desc">Cool blue. Rhythm is mechanical, steady, reliable.</p>
+            </div>
+            <div class="stem">
+              <span class="stem__label" style="color: var(--purple);">Melody / Synth</span>
+              <p class="stem__desc">Purple. The middle ground &mdash; emotional but structured.</p>
+            </div>
+          </div>
+          <blockquote class="cs-quote cs-quote--red">For someone learning to remix for the first time, color does the teaching before the controls do.</blockquote>
+        </div>
+        <div class="cs-img" style="aspect-ratio: 4 / 5; background-image: url('assets/ghost-flip-stems.png'), url('assets/ph-cs.svg');" role="img" aria-label="Isolated stems"></div>
+      </div>
+    </section>
+
+    <!-- 05 TESTING -->
+    <section class="cs-block">
+      <p class="cs-block__num">05 &mdash; Testing</p>
+      <h2 class="cs-block__headline">5 users. One goal.</h2>
+      <p class="cs-block__body">
+        I ran usability tests to see if users could complete a full Ghost-Flip without
+        friction. The biggest finding was in the FX controls, the original circular dial
+        was too fiddly on mobile. Users instinctively wanted to drag, not rotate. That
+        insight directly drove the switch to the horizontal slider.
+      </p>
+      <div style="margin-top: 28px; max-width: 760px;">
+        <div class="cs-callout cs-callout--yes">
+          <span class="cs-callout__ic">&#10003;</span>
+          <p><strong>FX Slider</strong> &mdash; Users instinctively dragged without any instruction needed.</p>
+        </div>
+        <div class="cs-callout cs-callout--no">
+          <span class="cs-callout__ic">&#10007;</span>
+          <p><strong>Circular dial</strong> &mdash; Removed. Too fiddly on mobile, replaced with horizontal slider.</p>
+        </div>
+      </div>
+      <div style="margin-top: 32px;">
+        <p class="cs-fromto">From this <span class="arrow">&rarr;</span> To this</p>
+        <div class="cs-img" style="aspect-ratio: 16 / 9; background-image: url('assets/ghost-flip-testing.png'), url('assets/ph-cs.svg');" role="img" aria-label="Before and after FX control"></div>
+      </div>
+    </section>
+
+    <!-- 06 FINAL SCREENS -->
+    <section class="cs-block">
+      <p class="cs-block__num">06 &mdash; Final Screens</p>
+      <h2 class="cs-block__headline">The finished flow.</h2>
+      <div class="cs-img" style="aspect-ratio: 16 / 5; background-image: url('assets/ghost-flip-finalscreens.png'), url('assets/ph-cs.svg');" role="img" aria-label="Final screens"></div>
+    </section>
+
+    <!-- 07 OUTCOME -->
+    <section class="cs-block">
+      <p class="cs-block__num">07 &mdash; Outcome</p>
+      <div class="cs-outcome">
+        <p class="cs-outcome__lead">
+          From listener to creator in under a minute. Ghost-Flip strips away every
+          barrier that ever made remixing feel out of reach.
+        </p>
+        <p class="cs-outcome__body">
+          Ghost-Flip makes remixing feel like the easiest thing in the world. Isolate
+          stems, play with effects, generate your cover art &mdash; all without ever
+          leaving your phone. The final prototype proved that music tech UI has to be
+          as expressive as the sound itself.
+        </p>
+      </div>
+    </section>
+
+    <!-- 08 REFLECTION -->
+    <section class="cs-block">
+      <p class="cs-block__num">08 &mdash; Reflection</p>
+      <h2 class="cs-block__headline">What I'd do differently.</h2>
+      <div class="cs-cols2">
+        <div>
+          <p class="cs-col2__label">What Worked</p>
+          <p class="cs-col2__body">
+            The stem isolation mechanic landed immediately &mdash; users felt like they
+            were inside the track. The Ghost-Credit system gave users a sense of legal
+            safety without adding any friction to the flow.
+          </p>
+        </div>
+        <div>
+          <p class="cs-col2__label">What I'd Change</p>
+          <p class="cs-col2__body">
+            I'd invest more time in the AI Album Art generator &mdash; it was the most
+            delightful moment in testing but the least developed part of the design. That
+            screen has the most potential to make Ghost-Flip feel like a creative tool,
+            not just a remixing utility.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEXT / PREVIOUS -->
+    <nav class="cs-nav" aria-label="More case studies">
+      <a class="cs-navcard" href="tirivelo.html">
+        <span class="cs-navcard__tag" style="color: var(--green);">Shipped</span>
+        <p class="cs-navcard__title">&larr; TiriVelo: Pet Care Redesign</p>
+        <p class="cs-navcard__meta">Live Client &middot; UI + UX &middot; 2026</p>
+        <span class="cs-navcard__link">View Case Study &rarr;</span>
+      </a>
+      <a class="cs-navcard cs-navcard--next" href="dap.html">
+        <span class="cs-navcard__tag" style="color: var(--cyan);">Prototype</span>
+        <p class="cs-navcard__title">Dap: Trade Skills, Not Money &rarr;</p>
+        <p class="cs-navcard__meta">End-to-End Product &middot; UX + UI &middot; 2026</p>
+        <span class="cs-navcard__link">View Case Study &rarr;</span>
+      </a>
+    </nav>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="footer__name">Jadyn Calkins &mdash; Product Designer</span>
+    </div>
+    <span class="footer__copy">NYC 2026 &copy;</span>
+  </footer>
+
+</body>
+</html>
