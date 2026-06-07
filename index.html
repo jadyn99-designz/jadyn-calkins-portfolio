@@ -3546,15 +3546,37 @@
         flip360:  { jump: '98px', spin: '360deg' }
       };
 
+      // How high the skater can pop right now without its head reaching any
+      // button directly above it. Keeps tricks "just below the buttons".
+      function headroom() {
+        var sk = skater.getBoundingClientRect();
+        var obstacles = document.querySelectorAll('.hero__cta .btn, .trick-btn');
+        var room = Infinity;
+        obstacles.forEach(function (o) {
+          var r = o.getBoundingClientRect();
+          var overlapsX = r.right > sk.left && r.left < sk.right;
+          var isAbove = r.bottom <= sk.top + 6;
+          if (overlapsX && isAbove) room = Math.min(room, sk.top - r.bottom);
+        });
+        return room; // Infinity if nothing is above the skater
+      }
+
       var busy = false;
       function doTrick(name) {
         var cfg = CFG[name];
         if (busy || !cfg) return;
         busy = true;
+
+        // cap the jump so the apex lands ~10px below the nearest button above
+        var desired = parseInt(cfg.jump, 10);
+        var room = headroom();
+        var jump = (room === Infinity) ? desired
+                                       : Math.max(10, Math.min(desired, room - 10));
+
         skater.classList.add('is-trick');        // pause cruising
         skater.classList.remove('skater-cruise');
         skater.classList.add(POSE[name]);
-        bob.style.setProperty('--jump', cfg.jump);
+        bob.style.setProperty('--jump', jump + 'px');
         bob.style.setProperty('--spin', cfg.spin);
         bob.classList.add('trick-air');
         setTimeout(function () {
