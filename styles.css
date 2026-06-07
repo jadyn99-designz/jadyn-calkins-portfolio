@@ -3179,6 +3179,7 @@
     }
 
     .card__media {
+      display: block; /* lets an <a> media tile size correctly */
       width: 100%;
       aspect-ratio: 16 / 10;
       background-color: var(--dark-bg);
@@ -3188,6 +3189,9 @@
       background-repeat: no-repeat;
       border-bottom: 2px solid rgba(242, 237, 228, 0.14);
     }
+
+    /* linked card title keeps the Bebas display font */
+    .card__title a { font: inherit; color: inherit; text-decoration: none; }
 
     .card__body {
       display: flex;
