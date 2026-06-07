@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jadyn Calkins &mdash; Portfolio</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -2870,12 +2871,11 @@
       line-height: 1;
     }
 
-    .nav__logo .mark {
-      width: 14px;
-      height: 14px;
-      background: var(--yellow);
-      box-shadow: 4px 4px 0 0 var(--red);
-      display: inline-block;
+    .nav__logo-img {
+      height: 34px;
+      width: auto;
+      display: block;
+      image-rendering: pixelated; /* keep the pixel art crisp */
     }
 
     .nav__logo .dot { font: inherit; color: var(--red); }
@@ -3151,7 +3151,7 @@
         padding: 14px 6vw;
       }
       .nav__logo { font-size: 11px; gap: 9px; }
-      .nav__logo .mark { width: 11px; height: 11px; box-shadow: 3px 3px 0 0 var(--red); }
+      .nav__logo-img { height: 28px; }
       .nav__links { gap: 14px; }
       .nav__links a { font-size: 8px; letter-spacing: 0; }
 
@@ -3173,7 +3173,7 @@
   <!-- Navigation -->
   <nav class="nav">
     <a class="nav__logo" href="#top">
-      <span class="mark"></span>JADYN<span class="dot">.</span>
+      <img class="nav__logo-img" src="assets/logo.png" alt="Jadyn Calkins logo">JADYN<span class="dot">.</span>
     </a>
     <ul class="nav__links">
       <li><a href="#work">Work</a></li>
