@@ -3330,6 +3330,107 @@
     }
 
     /* -------------------------------------------------------------------
+       ABOUT
+       ------------------------------------------------------------------- */
+    .about-block {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: clamp(24px, 5vw, 64px);
+      padding: 44px 0;
+      border-top: 2px solid rgba(242, 237, 228, 0.12);
+    }
+
+    .about-block__num {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 10px;
+      line-height: 1.7;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin: 0;
+    }
+
+    .about-block__body { max-width: 680px; }
+
+    .about-block__body p {
+      color: var(--concrete);
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 0 0 18px;
+    }
+    .about-block__body p:last-child { margin-bottom: 0; }
+
+    /* lead line — extra specificity to beat .about-block__body p */
+    .about-block__body .about-lead {
+      font-weight: 700;
+      color: var(--cream);
+      font-size: clamp(18px, 2.3vw, 22px);
+      line-height: 1.5;
+      margin: 0 0 22px;
+    }
+
+    .skill { margin-bottom: 30px; }
+    .skill:last-child { margin-bottom: 0; }
+
+    .skill__title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--cream);
+      margin: 0 0 8px;
+    }
+
+    .about-tools {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .tool-group {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .about-tools .tool-group__label {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 8px;
+      line-height: 1.7;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin: 0;
+    }
+
+    .about-tools .tool-group__items {
+      color: var(--cream);
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .about-cta {
+      border-top: 2px solid rgba(242, 237, 228, 0.12);
+      padding-top: 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 26px;
+    }
+
+    .about-cta__title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(44px, 6vw, 76px);
+      line-height: 0.95;
+      color: var(--cream);
+      margin: 0;
+    }
+
+    .about-cta__title .dot { color: var(--red); }
+
+    /* -------------------------------------------------------------------
        MOBILE
        ------------------------------------------------------------------- */
     @media (max-width: 768px) {
@@ -3388,6 +3489,18 @@
         align-items: flex-start;
       }
       .footer__right { align-items: flex-start; }
+
+      /* about stacks */
+      .about-block {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 32px 0;
+      }
+      .tool-group {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .about-cta { padding-top: 44px; }
     }
   </style>
 </head>
@@ -3505,6 +3618,86 @@
           <a class="card__link" href="#">View Case Study &rarr;</a>
         </div>
       </article>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <p class="section__eyebrow">About</p>
+    <h2 class="section__title">Designer, problem solver,<br>human first<span class="dot">.</span></h2>
+
+    <!-- 01 Who I Am -->
+    <div class="about-block">
+      <p class="about-block__num">01 &mdash; Who I Am</p>
+      <div class="about-block__body">
+        <p class="about-lead">I design products that feel human.</p>
+        <p>
+          I'm Jadyn Calkins, a Product Designer based in New York City. I came up
+          through operations at a tech startup &mdash; sitting close enough to the
+          product to see exactly where the experience breaks down for real users.
+          That background is what makes me different: I design with the business,
+          the user, and the edge cases all in the room at once.
+        </p>
+        <p>
+          When I'm not in Figma you'll find me DJing, playing soccer, drawing, or
+          somewhere outside touching grass.
+        </p>
+      </div>
+    </div>
+
+    <!-- 02 What I Do -->
+    <div class="about-block">
+      <p class="about-block__num">02 &mdash; What I Do</p>
+      <div class="about-block__body">
+        <div class="skill">
+          <h3 class="skill__title">UX Research &amp; Strategy</h3>
+          <p>
+            I talk to people. A lot. Not just users &mdash; engineers,
+            stakeholders, PMs. Understanding what everyone actually needs before
+            touching a single frame is where good design starts.
+          </p>
+        </div>
+        <div class="skill">
+          <h3 class="skill__title">UI Design &amp; Prototyping</h3>
+          <p>
+            High-fidelity mockups and interactive prototypes that don't just look
+            good in a presentation &mdash; they hold up when real people use them.
+          </p>
+        </div>
+        <div class="skill">
+          <h3 class="skill__title">Product Thinking</h3>
+          <p>
+            I came up through operations so I understand how products actually run.
+            I design with the business, the user, and the edge cases all in the
+            room at once.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 Tools & Skills -->
+    <div class="about-block">
+      <p class="about-block__num">03 &mdash; Tools &amp; Skills</p>
+      <div class="about-block__body about-tools">
+        <div class="tool-group">
+          <p class="tool-group__label">Design</p>
+          <p class="tool-group__items">Figma, Framer, Adobe Creative Suite</p>
+        </div>
+        <div class="tool-group">
+          <p class="tool-group__label">Research</p>
+          <p class="tool-group__items">User interviews, Usability testing, Affinity mapping, FigJam</p>
+        </div>
+        <div class="tool-group">
+          <p class="tool-group__label">Collaboration</p>
+          <p class="tool-group__items">Client stakeholder management, Design handoff to engineers, Agile / iterative workflows, User testing facilitation</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="about-cta">
+      <h3 class="about-cta__title">Let's work together<span class="dot">.</span></h3>
+      <a class="btn btn--primary" href="#contact">Get in Touch &rarr;</a>
     </div>
   </section>
 
