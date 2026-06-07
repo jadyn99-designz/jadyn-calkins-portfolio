@@ -3400,6 +3400,19 @@
       margin: 0;
     }
 
+    /* My Stack — prominent tools line with accented dot separators */
+    .about-block__body .about-stack {
+      color: var(--cream);
+      font-size: clamp(18px, 2.3vw, 22px);
+      line-height: 1.6;
+      margin: 6px 0 0;
+    }
+
+    .about-stack .sep {
+      color: var(--cyan);
+      margin: 0 6px;
+    }
+
     .about-cta {
       border-top: 2px solid rgba(242, 237, 228, 0.12);
       padding-top: 56px;
