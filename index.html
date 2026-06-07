@@ -2941,10 +2941,10 @@
     /* spans inside the headline must keep the h1 font, not the global span rule */
     .hero h1 span { font: inherit; }
 
-    .hero h1 .outline {
-      color: transparent;
-      -webkit-text-stroke: 2px var(--cream);
-      text-stroke: 2px var(--cream);
+    /* solid cream with a hard pixel-offset shadow (on-brand, renders clean) */
+    .hero h1 .accent {
+      color: var(--cream);
+      text-shadow: 6px 6px 0 var(--red);
     }
 
     .hero h1 .dot { color: var(--red); }
@@ -3112,7 +3112,7 @@
         <span class="badge"><i class="pulse"></i>Available for work</span>
         <p class="hero__eyebrow">Product Designer / UI&middot;UX Designer</p>
       </div>
-      <h1>Jadyn<br><span class="outline">Calkins</span><span class="dot">.</span></h1>
+      <h1>Jadyn<br><span class="accent">Calkins</span><span class="dot">.</span></h1>
       <p class="hero__sub">
         I design <strong>intuitive, user-centered products</strong> and digital
         experiences &mdash; built to move, not sit still.
