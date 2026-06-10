@@ -3600,6 +3600,16 @@
     .cs-breadcrumb .sep,
     .cs-fromto .arrow { font: inherit; }
 
+    /* video frame: drop a screen recording (.mp4) in for prototype walkthroughs */
+    .cs-video {
+      display: block;
+      width: 100%;
+      background: #14141C;
+      border: 2px solid rgba(242, 237, 228, 0.14);
+      line-height: 0;
+    }
+    .cs-video video { display: block; width: 100%; height: auto; }
+
     /* reusable image frame: drop the real .png on top of the placeholder svg */
     .cs-img {
       width: 100%;
