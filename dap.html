@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dap &mdash; Jadyn Calkins</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a class="nav__logo" href="index.html">
+      <img class="nav__logo-img" src="assets/logo.png" alt="Jadyn Calkins logo">JADYN<span class="dot">.</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html#work" aria-current="page">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="cs">
+
+    <!-- HERO -->
+    <header class="cs-hero">
+      <p class="cs-breadcrumb"><a href="index.html#work" style="color:inherit;text-decoration:none;">Work</a> <span class="sep">&rarr;</span> Dap</p>
+      <div class="cs-hero__head">
+        <span class="cs-num-big">02</span>
+        <div>
+          <h1 class="cs-title">Dap</h1>
+          <p class="cs-subtitle">Trade Skills, Not Money.</p>
+        </div>
+      </div>
+      <p class="cs-tags">Peer-to-Peer Market &middot; Product Design &middot; Prototype '26 &middot; Mobile</p>
+      <p class="cs-desc">A peer-to-peer skill sharing marketplace that turns casual favors into a reliable underground economy built on proximity, reputation, and a $1 handshake.</p>
+      <p class="cs-stats">05 Usability Tests &middot; $1 Handshake Fee</p>
+      <div class="cs-meta">Role &mdash; Product Designer &middot; Timeline &mdash; Spring 2026 &middot; Platform &mdash; Mobile &middot; Tools &mdash; Figma</div>
+    </header>
+
+    <!-- Hero image -->
+    <div class="cs-img" style="aspect-ratio: 16 / 10; background-image: url('assets/dap-hero.png'), url('assets/ph-cs.svg');" role="img" aria-label="Dap phone mockups"></div>
+
+    <!-- 00 PROTOTYPE WALKTHROUGH -->
+    <section class="cs-block">
+      <p class="cs-block__num">00 &mdash; Prototype Walkthrough</p>
+      <div class="cs-center">
+        <div class="cs-img" style="aspect-ratio: 9 / 19; background-image: url('assets/dap-prototype.png'), url('assets/ph-cs.svg');" role="img" aria-label="Prototype walkthrough"></div>
+      </div>
+      <p class="cs-caption">See the full Dap trade flow &mdash; from discovery to handshake.</p>
+    </section>
+
+    <!-- 01 THE BRIEF -->
+    <section class="cs-block">
+      <p class="cs-block__num">01 &mdash; The Brief</p>
+      <h2 class="cs-block__headline">The gig economy takes a cut. Dap doesn't.</h2>
+      <div class="cs-split cs-split--top">
+        <blockquote class="cs-quote" style="margin-top:0;">Not a side hustle. Not a marketplace. A new way to get things done.</blockquote>
+        <p class="cs-block__body">
+          Most people have a skill someone else needs and vice versa. But there's never
+          been a reliable way to trade them. Cash platforms take fees, freelance
+          marketplaces are intimidating, and informal trades fall apart because nobody
+          shows up. Dap is building a new kind of economy &mdash; one where your skills
+          are your currency, accountability is built into the product, and a $1 handshake
+          makes it real.
+        </p>
+      </div>
+      <div class="cs-img" style="aspect-ratio: 16 / 8; margin-top: 36px; background-image: url('assets/dap-brief-screens.png'), url('assets/ph-cs.svg');" role="img" aria-label="Three Dap screens"></div>
+    </section>
+
+    <!-- 02 RESEARCH -->
+    <section class="cs-block">
+      <p class="cs-block__num">02 &mdash; Research</p>
+      <div class="cs-split cs-split--top">
+        <h2 class="cs-block__headline" style="margin-bottom:0;">What breaks a trade before it starts.</h2>
+        <p class="cs-block__body">
+          I ran embedded usability tests with 5 users across different skill types to
+          understand where trust breaks down in a peer-to-peer exchange. Three clear
+          themes emerged &mdash; location and logistics, fraud prevention and safety,
+          and how people define a fair trade.
+        </p>
+      </div>
+      <div class="cs-img" style="aspect-ratio: 16 / 9; margin-top: 36px; background-image: url('assets/dap-research.png'), url('assets/ph-cs.svg');" role="img" aria-label="Research synthesis: Location & Logistics / Fraud Prevention & Safety / Value Exchange & The Handshake"></div>
+    </section>
+
+    <!-- 03 DESIGN DECISIONS -->
+    <section class="cs-block">
+      <p class="cs-block__num">03 &mdash; Design Decisions</p>
+      <h2 class="cs-block__headline">Two decisions that defined the product.</h2>
+
+      <div class="cs-decision">
+        <span class="cs-tag">Discovery</span>
+        <p class="cs-block__body">
+          The discovery experience was designed to feel like a marketplace; familiar,
+          local, low friction. You search the skill you need, see who's offering it
+          nearby or remotely, and instead of awkwardly asking someone to do something
+          for free, you propose a trade with your own skill. That flip is everything.
+          It removes the power imbalance of asking for a favor and replaces it with an
+          equal exchange &mdash; I have something you want, you have something I want,
+          let's make it happen.
+        </p>
+        <blockquote class="cs-quote cs-quote--red">During testing we discovered users needed two things before proposing a trade: social proof and proximity. We added vouch scores and distance to every profile card.</blockquote>
+        <div class="cs-img" style="aspect-ratio: 16 / 9; margin-top: 32px; background-image: url('assets/dap-discovery.png'), url('assets/ph-cs.svg');" role="img" aria-label="Two discovery screens"></div>
+        <div class="reach-grid" style="margin-top: 24px;">
+          <div class="reach-item">
+            <p class="reach-item__title"><span class="arrow">&rarr;</span> Vouch scores</p>
+            <p class="reach-item__desc">Social proof before the first message. Users wouldn't propose a trade without knowing someone was trustworthy.</p>
+          </div>
+          <div class="reach-item">
+            <p class="reach-item__title"><span class="arrow">&rarr;</span> Distance</p>
+            <p class="reach-item__desc">Proximity matters. Users wanted to know if a trade was actually possible before investing time in a conversation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-decision">
+        <span class="cs-tag">Trade Desk</span>
+        <p class="cs-block__body">
+          Early Trade Desk designs structured offers as itemized line items with a live
+          Trade Balance module calculating fairness in real time. After recognizing that
+          rigid structure limits the kinds of trades people can propose, a haircut for a
+          logo design doesn't fit neatly into a spreadsheet, the layout evolved into open
+          text fields. Letting users describe their offer in their own words keeps the
+          negotiation human.
+        </p>
+        <blockquote class="cs-quote">Making a skill trade as reliable as a cash transaction.</blockquote>
+        <div class="cs-img" style="aspect-ratio: 16 / 9; margin-top: 32px; background-image: url('assets/dap-tradedesk.png'), url('assets/ph-cs.svg');" role="img" aria-label="Four Trade Desk screens"></div>
+      </div>
+    </section>
+
+    <!-- 04 TESTING -->
+    <section class="cs-block">
+      <p class="cs-block__num">04 &mdash; Testing</p>
+      <h2 class="cs-block__headline">5 users. 1 trade. Zero flakes.</h2>
+      <p class="cs-block__body">
+        I ran embedded usability tests to see if users could navigate from discovery to
+        a completed handshake without friction. One clear insight came out of testing
+        that directly changed the design &mdash; users said they wouldn't propose a trade
+        without knowing who they were dealing with and how far away they were. Vouch
+        scores and distance were added to every profile card as a result.
+      </p>
+      <p class="cs-note"><span class="ic">&#10003;</span><strong>Vouch scores + distance</strong> &mdash; added after testing revealed trust and proximity were non-negotiable before a trade proposal.</p>
+    </section>
+
+    <!-- 05 SOME FINAL SCREENS -->
+    <section class="cs-block">
+      <p class="cs-block__num">05 &mdash; Some Final Screens</p>
+      <h2 class="cs-block__headline">An economy built on skill, trust, and showing up.</h2>
+      <div class="cs-img" style="aspect-ratio: 16 / 7; background-image: url('assets/dap-finalscreens.png'), url('assets/ph-cs.svg');" role="img" aria-label="Three final screens"></div>
+    </section>
+
+    <!-- 06 OUTCOME -->
+    <section class="cs-block">
+      <p class="cs-block__num">06 &mdash; Outcome</p>
+      <div class="cs-outcome">
+        <p class="cs-outcome__lead">
+          The underground economy, made reliable. Skills are currency. Showing up is the
+          only rule.
+        </p>
+        <p class="cs-outcome__body">
+          Dap proves that accountability doesn't require complexity, it requires skin in
+          the game. The $1 handshake fee and the open trade desk together create a system
+          where showing up is the only option. Testing confirmed users felt safe, the flow
+          was clear, and the product felt like something they'd actually use.
+        </p>
+      </div>
+    </section>
+
+    <!-- 07 REFLECTION -->
+    <section class="cs-block">
+      <p class="cs-block__num">07 &mdash; Reflection</p>
+      <h2 class="cs-block__headline">What I'd do differently.</h2>
+      <div class="cs-cols2">
+        <div>
+          <p class="cs-col2__label">What Worked</p>
+          <p class="cs-col2__body">
+            The discovery experience landed immediately &mdash; users understood the
+            marketplace parallel without being told. Adding vouch scores and distance
+            after testing was the right call and made the product feel trustworthy. The
+            open text Trade Desk felt more human than a structured version.
+          </p>
+        </div>
+        <div>
+          <p class="cs-col2__label">What I'd Change</p>
+          <p class="cs-col2__body">
+            I'd spend more time on the matching algorithm. How does Dap surface the right
+            trade partner at the right time? Right now discovery is search-based which puts
+            all the work on the user. A smarter recommendation layer would make the product
+            feel more like it's working for you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEXT / PREVIOUS -->
+    <nav class="cs-nav" aria-label="More case studies">
+      <a class="cs-navcard" href="ghost-flip.html">
+        <span class="cs-navcard__tag" style="color: var(--cyan);">Prototype</span>
+        <p class="cs-navcard__title">&larr; Ghost-Flip: Closing the Creator Gap</p>
+        <p class="cs-navcard__meta">SoundCloud &middot; UX + UI &middot; Capstone 2026</p>
+        <span class="cs-navcard__link">View Case Study &rarr;</span>
+      </a>
+      <a class="cs-navcard cs-navcard--next" href="tirivelo.html">
+        <span class="cs-navcard__tag" style="color: var(--green);">Shipped</span>
+        <p class="cs-navcard__title">TiriVelo: Pet Care Redesign &rarr;</p>
+        <p class="cs-navcard__meta">Live Client &middot; UI + UX &middot; 2026</p>
+        <span class="cs-navcard__link">View Case Study &rarr;</span>
+      </a>
+    </nav>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="footer__name">Jadyn Calkins &mdash; Product Designer</span>
+    </div>
+    <span class="footer__copy">NYC 2026 &copy;</span>
+  </footer>
+
+</body>
+</html>
