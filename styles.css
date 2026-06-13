@@ -3184,7 +3184,7 @@
       aspect-ratio: 16 / 10;
       background-color: var(--dark-bg);
       background-image: url('assets/ph-work.svg');
-      background-size: cover;
+      background-size: contain; /* show the whole mockup, no cropping */
       background-position: center;
       background-repeat: no-repeat;
       border-bottom: 2px solid rgba(242, 237, 228, 0.14);
